@@ -14,6 +14,7 @@ public class Chest : Collectable
            collected = true;
            GetComponent<SpriteRenderer>().sprite = emptyChest;
            Debug.Log("Switch to empty chest");
+           GameManager.instance.ShowText("+" + pesosAmount + "pesos!", 25, Color.yellow, transform.position, Vector3.up * 50, 3.0f);
        }
     }
 }

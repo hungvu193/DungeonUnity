@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+      
     }
 
     // Update is called once per frame
@@ -53,5 +54,9 @@ public class Player : MonoBehaviour
         {
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
+    }
+
+    void OnDestroy() {
+        Debug.Log("Destroy");
     }
 }
